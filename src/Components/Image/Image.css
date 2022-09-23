@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+
+body{
+    background-color: white;
+
+}
+
+.inner-image{
+    border-radius: 30px;
+    background-color: white;
+    width: 30%;
+    height:70%;
+    margin-left: 60%;
+    margin-top: 6%;
+}
+.image {
+    width: 80%;
+    height: 70%;
+    margin-left: 60%;
+    border-radius: 20px;
+    /* margin: 3%; */
+    box-shadow: 70px  black;
+}
+
+h3 {
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    float: left;
+    margin-left: -30%;
+    margin-top: -2%;
+    position: fixed;
+}

@@ -1,0 +1,205 @@
+#outer-details {
+    width: 45.5vw;
+    height: 50vh;
+    border: 2px solid gray;
+    margin-top: -8%;
+    margin-left: 4.5%
+}
+
+.customer-details {
+    width: 120%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1%;
+    justify-content: center;
+}
+
+.details-customer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.add-new-address {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+    margin-top: 0.5%;
+}
+
+.add-new-address Button {
+    border: 2px solid brown;
+    margin-left: -95%;
+}
+
+#full-name {
+    width: 80%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 3%;
+
+}
+
+.full-name-details {
+    width: 50%;
+    height: 100%;
+}
+
+.mobile-details {
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+
+}
+
+.address-details {
+    width: 80%;
+    height: 23%;
+    margin-left: 3%;
+}
+
+.city-details {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.city-town {
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+}
+
+.state {
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+}
+
+.type-details {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.home-bullet {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-bullet,
+.work-bullet,
+.other-bullet li {
+    list-style-type: circle;
+
+
+}
+
+.work-bullet {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-bullet {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continue-button-details {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: 6.5%;
+    margin-left: -4%;
+}
+
+.outer-details label {
+    display: flex;
+    width: 100% !important;
+
+}
+
+/* label {
+    width: 100% !important;
+
+} */
+
+.outlined-basic-fullname {
+    width: 100% !important;
+    margin-left: -10%;
+    height: 5% !important;
+}
+
+.outlined-basic-mobile {
+    width: 100% !important;
+    margin-left: -10%;
+}
+
+.outlined-basic-address {
+    width: 100% !important;
+    margin-left: 10%;
+    height: 20%;
+}
+
+.outlined-basic-city {
+    width: 100% !important;
+    margin-left: -25%;
+    height: 20%;
+}
+
+.outlined-basic-state {
+    width: 100% !important;
+    margin-left: -25%;
+    height: 20%;
+}
+
+@media screen and (min-width:720px) and (max-width:1024px) {
+    .continue-button-details {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        margin: 1%;
+        margin-top: 1%;
+        margin-left: -5%;
+    }
+
+    .add-new-address {
+        margin: 0.2%;
+        margin-left: 45%;
+        margin-top: 1%;
+    }
+}
+
+@media screen and (max-width:3004px) {
+    .add-new-address {
+        margin: 0.2%;
+        margin-left: 60%;
+        margin-top: 1%;
+    }
+
+    .continue-button-details {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        margin-top: 3%;
+    }
+}

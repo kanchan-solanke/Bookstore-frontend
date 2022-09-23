@@ -1,0 +1,18 @@
+body{
+    background-color: gray;
+    width:100%
+}
+.main-image{
+    border: 2px solid red;
+    width:100% !important
+}
+
+.login-imagen{
+    border: 2px solid green;
+
+}
+
+.signup-image{
+    border: 2px solid yellow;
+
+}

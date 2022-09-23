@@ -1,0 +1,74 @@
+.outer-order {
+    width: 49vw;
+    height: 30vh;
+    border: 2px solid gray;
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image-bookdetails-order {
+    display: flex;
+    flex-direction: row;
+    margin: 20%;
+    height: 50%;
+}
+.book_title-order {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 50% !important;
+    margin-left: 80%;
+    margin-top: -75% !important;
+
+}
+
+.book_author-order {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 40%;
+    margin-left: 80%;
+    margin-top: 20% !important;
+}
+
+.book-price-order {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: left;
+margin-left: 20%;
+margin-top: 20%;
+}
+
+.checkout-order {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width: 15%;
+height: 10%;
+margin-left: 50%;
+margin-top: 20%;
+}
+
+.book_price-discount-order {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    margin-left: 60%;
+
+}
+
+.book_price-original-order {
+    flex-direction: column;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 40%;
+    margin-left: 60%;
+
+
+}

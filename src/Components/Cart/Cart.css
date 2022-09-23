@@ -1,0 +1,224 @@
+.main-cart{
+    width: 90vw;
+    height: 100vh;
+    margin: 3%;
+}
+.outer-cart {
+    width: 80%;
+    height: 60%;
+    margin-top: -1%;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-cart {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 3%;
+
+}
+
+.book-cart {
+    border: 2px solid forestgreen;
+    width: 90%;
+    height: 60%;
+    /* border: 2px solid gray; */
+    margin: 2%;
+}
+
+.address-cart {
+    width: 90%;
+    height: 15%;
+    border: 2px solid gray;
+    margin: 3%;
+    display: flex;
+    justify-content: left;
+}
+
+.order-cart {
+    width: 90%;
+    height: 15%;
+    border: 2px solid gray;
+    margin: 3%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.my-cart {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bookdetails-cart {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+}
+
+.button-cart {
+    width: 100%;
+    height: 10%;
+    margin-top: -1%;
+}
+
+.sub-my-cart {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#location-cart {
+    border: 2px solid gray;
+    width: 60% !important;
+    height: 100% !important;
+    font-size: small;
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 12% !important;
+    margin-top: 2% !important;
+}
+
+#book-image-cart {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title-cart {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+#author-cart {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: -39%; */
+   }
+
+#discount-price-cart {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.incre-decre-cart {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-image-cart {
+    width: 50%;
+}
+
+#discount-cart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+/* margin-left: -10%; */
+
+}
+
+.price-cart {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: -40%;
+    text-decoration: line-through;
+}
+
+#incre-decre-cart-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: 20%;
+}
+
+#remove-cart-buuton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 14%;
+}
+
+.book-image-cart img {
+    justify-content: center !important;
+    display: flex;
+    align-items: center !important;
+    margin-left: 20% !important;
+}
+
+.button-cart Button {
+    display: flex;
+    flex-direction: row;
+    margin-left: 75%;
+}
+
+#location-symbol {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.use-current {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.arrow-cart {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.use-current {
+    margin-left: 5% !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media screen and (max-width:720px) {
+    .outer-cart {
+        width: 100vw;
+        height: 80vh;
+    }
+}

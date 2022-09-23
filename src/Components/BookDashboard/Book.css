@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+.quickview_inner-box {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 235px;
+    height: 275px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    /* border: 1px solid #E2E2E2; */
+    border-radius: 3px;
+    opacity: 1;
+    margin: 35px 20px 20px 10px;
+    cursor: pointer;
+}
+
+.quickview_section1 {
+    width: 90%;
+    height: 80%;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 2px 2px 0px 0px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quickview_section2 {
+    height: 103px;
+    padding: 9px 0px 0px 20px;
+}
+
+.quickview_book-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.quickview_book-title {
+    width: 130px;
+    height: 19px;
+    text-align: left;
+    font: normal normal normal 14px/19px 'Roboto', sans-serif;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+}
+
+.quickview_book-review {
+    display: flex;
+    align-items: center;
+}
+
+.quickview_book-rating {
+    width: 33px;
+    height: 16px;
+    background: #388E3C 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quickview_rating-star {
+    width: 14px;
+    height: 13px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.quickview_rating-count {
+    font-size: 14px;
+}
+
+.quickview_book-price {
+    display: flex;
+    align-items: center;
+}
+
+.quickview_price-discount {
+    width: 100%;
+    margin-left: -20%;
+}
+
+.quickview_price-original {
+    width: 100%;
+    margin-right: -20%;
+    text-decoration-line: line-through;
+}
+
+.quickview_section1 img{
+    width: 70%;
+    height: 90%;
+}
