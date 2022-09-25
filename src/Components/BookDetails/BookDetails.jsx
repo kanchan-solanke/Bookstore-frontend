@@ -10,7 +10,7 @@ import Counter from '../Counter/Counter';
 
 
 function BookDetails(props) {
-
+    console.log('propy', props.bookdata.quantity)
     console.log("props", props.bookdata._id)
 
     const [bookCount, setBookCount] = React.useState([]);
@@ -37,7 +37,7 @@ function BookDetails(props) {
             .then((response) => {
                 console.log(response);
 
-                let check = response.data.data.book.filter((cart) => {
+                let check = response.data.data.book.map((cart) => {
                     console.log("cart-id", cart.productId)
                     if (cart.productId == props.bookdata._id) {
                         console.log("count", cart.productId)
@@ -46,7 +46,6 @@ function BookDetails(props) {
                     }
 
                 })
-                console.log("check", check)
 
             })
             .catch((error) => {
@@ -74,14 +73,13 @@ function BookDetails(props) {
 
                         <div className="book_extra-img-box book_selected-img">
 
-                            <img style={{ width: 50, padding: 2 }}
-                             src="https://public-v2links.adobecc.com/d096df37-ca37-4026-553f-8cfa6bec09ec/component?params=component_id%3A10fa5960-ae05-4a11-9365-133f07ce7183&params=version%3A0&token=1663608440_da39a3ee_6242d7adf3a224bf5b3fc05e2cf7ff50e220a909&api_key=CometServer1" alt='image'></img>
+                            <img style={{ width: 50, padding: 2 }} src="/Images/Image 11.png" alt='image'></img>
 
                         </div>
 
                         <div className="book_extra-img-box">
 
-                            <img style={{ width: 50, padding: 2, marginBottom: -18 }} src="https://public-v2links.adobecc.com/d096df37-ca37-4026-553f-8cfa6bec09ec/component?params=component_id%3A10fa5960-ae05-4a11-9365-133f07ce7183&params=version%3A0&token=1663608440_da39a3ee_6242d7adf3a224bf5b3fc05e2cf7ff50e220a909&api_key=CometServer1"></img>
+                            <img style={{ width: 50, padding: 2, marginBottom: -18 }} src="/Images/Image 11.png"></img>
 
                         </div>
 
@@ -90,7 +88,7 @@ function BookDetails(props) {
 
                         <div className="book_primary-img-box">
 
-                            <img style={{ width: 250, height: 350 }} className="main-image-bookdetails" src="https://public-v2links.adobecc.com/d096df37-ca37-4026-553f-8cfa6bec09ec/component?params=component_id%3A10fa5960-ae05-4a11-9365-133f07ce7183&params=version%3A0&token=1663608440_da39a3ee_6242d7adf3a224bf5b3fc05e2cf7ff50e220a909&api_key=CometServer1" alt='image'></img>
+                            <img style={{ width: 250, height: 350 }} className="main-image-bookdetails" src="/Images/Image 11.png" alt='image'></img>
 
                         </div>
 

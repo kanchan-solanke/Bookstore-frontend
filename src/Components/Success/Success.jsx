@@ -16,8 +16,9 @@ function Success() {
             <div className='orderplacepage'>
 
                 <div className='orderImage'>
-                    <img src='https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOkZXXQpZiem6vxTmsgUFMkum9nI20LGg2idDt6CPr20v%2BE%2FAgm%2ByUmg2lnFRFren8Ze11klv3OeJoWUsqGahDkK1J8UWDx7f9P2ff83jXcs0S5MBYU5p%2FGPvWdXVna09U8oJXafr2BhmNZpHxBe0p4gwu7VF6JGxYHYCmkfnItvADEAvaN8GQNFhjKeElXwubWqeVDk3DxKPMhqZKZjNvHPIO5bIJNd%2Fo7lbaDkvo%2BlopTMFWnRJ7LtUenV7y5S%2F1fiiAwwCs06TbDcDbsnXKe6T5%2BzmDTwd6OHIN3j9xYroSDfW57IKGPthT1hgpVm38N5PkAcK%2FeCgRIY0G3xR8b%2BXrPdQ67MR%2FPKBQ2%2F7%2FNIa9lJc5dzq5YZjKK1vdBU0mjxiF2YZRxJ%2B60FhTBM33JTfB0z0GgwReAqfn4737evPolZqvYWkYGXAClgtuHUP0lLTvxdyneI4duBYf%2FsO0xAr%2Bj%2F%2Be7aGEBiIc7rUGZULXdHNRioocws%2BuABUQI8GQ%3D%3D&sz=w512' className="orderimage" />
+                    <img  src="/Images/success1.png.jpg" className="orderimage" />
                     <h3>Order Placed Successfully</h3>
+                    <img  src="/Images/success2.jpg" className="orderimage" />
 
                 </div>
 

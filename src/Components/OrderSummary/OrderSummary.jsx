@@ -2,11 +2,6 @@ import { Button } from '@mui/material'
 import React, { useNavigate } from 'react'
 import { Navigate } from 'react-router-dom';
 import { getCart } from '../../Services/dataService';
-import Cart from '../Cart/Cart';
-import CartOne from '../CartOne/CartOne';
-import CartToOrderPlace from '../CartToOrderPlace/CartToOrderPlace';
-import OrderPlaces from '../OrderPlaces/OrderPlaces';
-import Success from '../Success/Success';
 import './OrderSummary.css'
 function OrderSummary(props) {
 
@@ -14,7 +9,7 @@ function OrderSummary(props) {
 
     //order checkout to order places
 
-   
+
     //get cart
 
     React.useEffect(() => {
@@ -39,7 +34,7 @@ function OrderSummary(props) {
             })
     }, [])
 
-   
+
 
     return (
         <div className='outer-order'>
@@ -49,7 +44,7 @@ function OrderSummary(props) {
                 <div className="book_primary-img-box-order">
 
                     <img style={{ width: 120, height: 150 }} className="main-image-bookdetails-order"
-                        src="https://public-v2links.adobecc.com/d096df37-ca37-4026-553f-8cfa6bec09ec/component?params=component_id%3Aad580fd0-abd0-4107-a45d-6be6d2fa445b&params=version%3A0&token=1663812987_da39a3ee_db4372c7de9d11c6a57b03c8535bb840c1f1bd97&api_key=CometServer1"></img>
+                        src="/Images/success1.png.jpg"></img>
 
                 </div>
 

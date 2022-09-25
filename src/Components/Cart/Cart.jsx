@@ -3,25 +3,21 @@ import './Cart.css'
 import Button from '@mui/material/Button';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import Counter from '../Counter/Counter';
-import Customer from '../CustomerDetails/Customer';
-import { getCart, RemoveCart } from '../../Services/dataService';
-import Popper from '../Popper/Popper';
-import Main from '../../Main/Main';
-import Box from '@mui/material/Box';
-import OrderSummary from '../OrderSummary/OrderSummary';
-import CartOne from '../CartOne/CartOne';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import { getCart, RemoveCart, updateCart } from '../../Services/dataService';
+
 
 
 function Cart(props) {
-  console.log("propsd cartone", props.bookcart)
 
   const [cartCount, setCartCount] = React.useState([]);
+  const [bookId, setBookId] = React.useState([])
 
   const [arraycart, setArray] = React.useState([])
   console.log('arraycart', arraycart)
 
-    //get cart
+  //get cart
 
   const getCartDetails = () => {
     getCart()
@@ -37,28 +33,6 @@ function Cart(props) {
 
   const RemoveCartDetails = () => {
     RemoveCart()
-    .then((response) => {
-      console.log(response);
-
-      let check = response.data.data.book.map((cart) => {
-        console.log("cart-id", cart.productId)
-        if (cart.productId == props.data._id) {
-          console.log("count", cart.productId)
-          return cart;
-        }
-
-      })
-      console.log("check", check)
-
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-  }
-
-  
-  React.useEffect(() => {
-    getCart()
       .then((response) => {
         console.log(response);
 
@@ -66,7 +40,6 @@ function Cart(props) {
           console.log("cart-id", cart.productId)
           if (cart.productId == props.data._id) {
             console.log("count", cart.productId)
-            setCartCount(response.data.data.book)
             return cart;
           }
 
@@ -75,26 +48,73 @@ function Cart(props) {
 
       })
       .catch((error) => {
+        console.log(error);
+      })
+  }
+
+
+  const getAllCartItems = (data) => {
+    getCart()
+      .then((response) => {
+        console.log(response);
+
+        let check = response.data.data.book.map((cart) => {
+          console.log("cart-id", cart.productId)
+          if (cart.productId == data) {
+            setCartCount(cart.quantity)
+            setBookId(props.book._id)
+            return data;
+          }
+          else {
+            setCartCount(0)
+            return data;
+          }
+        })
+
+      })
+      .catch((error) => {
         console.log(error)
       })
-  }, [])
+  }
 
+  const subQuantity = (event) => {
+    getAllCartItems(event.target.id)
+    let data = { quantity: props.bookCount - 1 }
+    updateCart(data, event.target.id)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  const AddQuantity = (event) => {
+    getAllCartItems(event.target.id)
+    let data = { quantity: props.bookCount + 1 }
+    updateCart(data, event.target.id)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   React.useEffect(() => {
     getCartDetails()
   }, [])
 
-  
-  
+
+
   return (
     <div className='main-cart'>
 
-      <div className='outer-cart'>
+      <div className='home-cart'>
+        <label> Home/My cart</label>
+      </div>
 
-        {/* Main  */}
-        <div className='home-cart'>
-          <label> Home/My cart</label>
-        </div>
+      <div className='outer-cart'>
 
         {/* Main  */}
 
@@ -130,7 +150,7 @@ function Cart(props) {
           </div>
 
           {/* Child  */}
-          
+
           {
             arraycart.length > 0 &&
             arraycart.map((arraycarts) => (
@@ -174,8 +194,17 @@ function Cart(props) {
                   {/* Super Child  */}
                   <div className='incre-decre-cart'>
                     {/* Super super Child  */}
-                    <div id='incre-decre-cart-icon'>
-                      <Counter onClick={props.bookCount} />
+                    <div id='incre-decre-cart-icon-sub'>
+
+                      <RemoveCircleOutlineIcon onClick={subQuantity} />
+                    </div>
+                    <div id='incre-decre-cart-icon-box'>
+                      <div className="quantityBox">{arraycarts.quantity}</div>
+
+                    </div>
+                    <div id='incre-decre-cart-icon-add'>
+
+                      <AddCircleOutlineOutlinedIcon onClick={AddQuantity} />
                     </div>
 
                     {/* Super super Child  */}
@@ -185,8 +214,9 @@ function Cart(props) {
                   </div>
                 </div>
 
-
               </div>
+
+
             )
             )
           }
@@ -204,7 +234,7 @@ function Cart(props) {
 
       </div>
 
-    </div>
+    </div >
   )
 }
 

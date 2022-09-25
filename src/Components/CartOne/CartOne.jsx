@@ -21,11 +21,11 @@ function CartOne(props) {
     // useState for order summary 
     const [ordersummary, setOrderSummary] = React.useState([])
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const toggleCheckout = () =>{
-    navigate('/success')
-}
+    const toggleCheckout = () => {
+        navigate('/success')
+    }
     const toggleBool = () => {
         setmyBool(!myBool)
 
@@ -48,19 +48,15 @@ const toggleCheckout = () =>{
     }, [])
 
 
-     return (
+    return (
         <div className='header-cartone'>
             <Header />
             <div className='cartone-all'>
 
                 <div>
-                   
-                            <Cart  toggleBool={toggleBool} />
-
-
-                    
+                    <Cart toggleBool={toggleBool} />
                 </div>
-
+            
                 {
                     myBool ?
                         <Customer toggleBoolOrder={toggleBoolOrder} />
@@ -71,6 +67,7 @@ const toggleCheckout = () =>{
                             </Button>
                         </div>
                 }
+
 
                 {/* Main  */}
                 {
@@ -87,7 +84,6 @@ const toggleCheckout = () =>{
                         </div>
 
                 }
-
 
             </div>
         </div>

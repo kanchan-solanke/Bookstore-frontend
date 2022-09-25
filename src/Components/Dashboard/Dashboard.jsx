@@ -6,7 +6,7 @@ import BookDetails from '../BookDetails/BookDetails'
 
 function Dashboard() {
 
-   
+
     // for getting book 
     const [books, setBooks] = React.useState([])
     console.log("books", books)
@@ -17,12 +17,12 @@ function Dashboard() {
 
     //store bookdetails to send to bookdetails.jsx
     const [bookdata, setBookData] = React.useState(true)
-console.log("bookdata" , bookdata)
+    console.log("bookdata", bookdata)
 
 
     //cart
-    
-   
+
+
     // to send book data to bookdetails
     const listenToBook = (data) => {
         console.log("data", data)
@@ -68,11 +68,11 @@ console.log("bookdata" , bookdata)
                         : <BookDetails bookdata={bookdata} />
                 }
 
-               
+
 
 
             </div>
-            
+
         </div>
 
     )

@@ -1,129 +1,82 @@
-.wishListPage{
-    height: 100%;
-    width: 72%;
+.outer-wishlist{
+width: 90vw;
+height: 90vh;
 }
-.wishlistwholepage{
-    min-height: 99.8vh;
-    min-width: 99.8vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-.wishListHeader{
-    height: 15%;
+
+.wishlist-header{
+    }
+
+.wishlist-home{
+    border: 2px solid rebeccapurple;
     width: 100%;
-    padding-top: 2%;
-    padding-bottom: 1%;
+    height: 5%;
     display: flex;
-    align-items: center;
-}
-.wishListContent{
-    height: 10%;
-    width: 90%;
-    border: 1px solid #E4E4E4;
-}
-.contentHeader{
-    height: 10%;
-    width: 98%;
-    background-color:#F5F5F5;
-    display: flex;
-    align-items: center;
-    font-size: large;
-    margin-bottom: 4%;
-    font-weight: 600;
-    padding:9px;
-}
-.Wcartsection1{
-    height:62%;
-    width: 40%;
-    display: flex;
+    justify-content: left;
     flex-direction: row;
+    margin: 1%;
 }
-.Wbooksection{
-    height: 70%;
-    width: 50%;
-    padding-bottom: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.wishlist-page{
+    border: 2px solid green;
+width: 100%;
+height: 80%;
+margin: 1%;
 }
-.WbookContent{
-    height: 100%;
-    width: 60%;
-}
-.WbookContent1{
-    height: 10%;
+
+.wishlist-page{
+    border: 2px solid black;
     width: 100%;
-    padding-top: 35%;
-    margin-top: -35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.WbookIncrement{
-    height: 20%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-.WbookIncrement1{
-    height: 100%;
-    width: 60%;
-    margin-left: 25%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.WbookHeading{
-    display: flex;
-    align-items: center;
-    font-size: large;
-    font-weight:500;
-    padding-left: 7%;
-}
-.WbookPrice{
-    display: flex;
-    align-items: center;
-    font-size: large;
-    font-weight:500;
-    margin-left: 7%;
-    margin-bottom: 12%;
+    height: 60%;
 
 }
-.WbookAuthor{
-    margin-left: 7%;
-    margin-bottom: 7%;
-    display: flex;
-    align-items: center;
-    font-size: smaller;
+
+.my-wishlist{
+    border: 2px solid rebeccapurple;
+width: 100%;
+height: 10%;
 }
-.Wremove{
+
+.whole-wishlist{
+    border: 2px solid red;
+    width: 100%;
     height: 90%;
-    width: 50vw;
-    margin-top: -50%;
+
+}
+
+.book-wishlist{
+    border: 2px solid palegreen;
+width: 20%;
+height: 80%;
+display: flex;
+flex-direction: column;
+margin: 1%;
+}
+
+.book-image-wishlist{
+    border: 2px solid peru;
+
+}
+
+.title-wishlist{
+    border: 2px solid purple;
+    width: 100%;
+    height: 20%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: column;
+
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px){
-    .section1b{
-        width: 100%;
-    }
-    .WbookContent{
-        width: 100%;
-    }
-    .WbookImage1{
-        height: 80%;
-        width: 85%;
-    }
+.author-wishlist{
+    border: 2px solid blue;
+
 }
 
+.price-wishlist{
+    border: 2px solid yellowgreen;
 
+}
 
+.remove-icon-wishlist{
+    border: 2px solid navajowhite;
 
-
-
-
-
+}

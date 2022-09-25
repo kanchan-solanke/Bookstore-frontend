@@ -15,7 +15,8 @@ function Book(props) {
 
             <div className="quickview_section1" >
 
-                <img src="https://public-v2links.adobecc.com/d096df37-ca37-4026-553f-8cfa6bec09ec/component?params=component_id%3A10fa5960-ae05-4a11-9365-133f07ce7183&params=version%3A0&token=1663608440_da39a3ee_6242d7adf3a224bf5b3fc05e2cf7ff50e220a909&api_key=CometServer1" alt='image'></img>
+                <img src="/Images/Image 11.png" alt='image'></img>
+
 
             </div>
 

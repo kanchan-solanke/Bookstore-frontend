@@ -1,15 +1,16 @@
-.main-cart{
+.main-cart {
     width: 90vw;
     height: 100vh;
     margin: 3%;
 }
+
 .outer-cart {
-    width: 80%;
-    height: 60%;
+    width: 90%;
+    height: auto;
     margin-top: -1%;
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
+    border: 2px solid gray;
 }
 
 .home-cart {
@@ -18,16 +19,20 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
-    margin: 3%;
-
+    margin: 1%;
+    margin-left: 1%;
 }
 
 .book-cart {
-    border: 2px solid forestgreen;
-    width: 90%;
-    height: 60%;
+    width: 70%;
+    height: 10% !important;
     /* border: 2px solid gray; */
-    margin: 2%;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10%;
 }
 
 .address-cart {
@@ -51,16 +56,18 @@
 
 .my-cart {
     width: 100%;
-    height: 20%;
+    height: 10%;
     display: flex;
     flex-direction: row;
 }
 
 .bookdetails-cart {
     width: 100%;
-    height: 75%;
+    height: auto !important;
     display: flex;
     flex-direction: row;
+    border: 2px solid gray;
+    margin: 1%;
 }
 
 .button-cart {
@@ -74,18 +81,19 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: left;
 }
 
 #location-cart {
     border: 2px solid gray;
-    width: 60% !important;
+    width: 100% !important;
     height: 100% !important;
     font-size: small;
-
+    justify-content: right;
     display: flex;
     flex-direction: row;
-    margin-left: 12% !important;
-    margin-top: 2% !important;
+    margin-left: 40% !important;
+    margin-top: 1% !important;
 }
 
 #book-image-cart {
@@ -102,6 +110,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 5%;
+    margin-left: -25%
 }
 
 #author-cart {
@@ -109,25 +118,43 @@
     height: 15%;
     display: flex;
     flex-direction: column;
-    /* margin-left: -39%; */
-   }
+    margin-left: -25%
+        /* margin-left: -39%; */
+}
 
 #discount-price-cart {
     width: 100%;
     height: 15%;
     display: flex;
     flex-direction: row;
+    margin-left: -25%
 }
+
+#incre-decre-cart-icon-sub {
+    margin-left: 2%;
+    width: 50%;
+}
+
+#incre-decre-cart-icon-add {
+    width: 50%;
+    margin-left: -20%;
+
+}
+
+.incre-decre-cart-icon-box {}
 
 .incre-decre-cart {
     width: 100%;
     height: 20%;
     display: flex;
     flex-direction: row;
+    margin-left: -4%;
+    margin-top: 5%;
 }
 
 .main-image-cart {
-    width: 50%;
+    width: 100%;
+    height: 50% !important;
 }
 
 #discount-cart {
@@ -135,8 +162,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-justify-content: center;
-/* margin-left: -10%; */
+    margin-left: -5%;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -145,8 +173,11 @@ justify-content: center;
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: -40%;
+    margin-left: -65%;
     text-decoration: line-through;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2%;
 }
 
 #incre-decre-cart-icon {
@@ -155,7 +186,7 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     margin-top: 15%;
-    margin-left: 20%;
+    margin-left: 30%;
 }
 
 #remove-cart-buuton {
@@ -164,7 +195,8 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 14%;
+    margin-left: -45%;
+    margin-top: -0.7%;
 }
 
 .book-image-cart img {
@@ -177,7 +209,8 @@ justify-content: center;
 .button-cart Button {
     display: flex;
     flex-direction: row;
-    margin-left: 75%;
+    margin-left: 76%;
+    margin-top: 1%;
 }
 
 #location-symbol {
