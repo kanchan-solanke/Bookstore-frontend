@@ -1,82 +1,160 @@
-.outer-wishlist{
-width: 90vw;
-height: 90vh;
+.main-cart-wishlist {
+    width: 90vw;
+    height: 100vh;
+    margin: 3%;
 }
 
-.wishlist-header{
-    }
+.outer-cart-wishlist {
+    width: 90%;
+    height: auto;
+    margin-top: -1%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
 
-.wishlist-home{
-    border: 2px solid rebeccapurple;
+}
+
+.home-cart-wishlist {
     width: 100%;
     height: 5%;
     display: flex;
-    justify-content: left;
     flex-direction: row;
+    justify-content: left;
     margin: 1%;
+    margin-left: 0.2%;
 }
 
-.wishlist-page{
-    border: 2px solid green;
-width: 100%;
-height: 80%;
-margin: 1%;
+.book-cart-wishlist {
+    width: 70%;
+    height: 10% !important;
+    /* border: 2px solid gray; */
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 2%;
+
 }
 
-.wishlist-page{
-    border: 2px solid black;
+.my-cart-wishlist {
     width: 100%;
-    height: 60%;
-
+    height: 10%;
+    display: flex;
+    flex-direction: row;
 }
 
-.my-wishlist{
-    border: 2px solid rebeccapurple;
-width: 100%;
-height: 10%;
-}
-
-.whole-wishlist{
-    border: 2px solid red;
+.bookdetails-cart-wishlist {
     width: 100%;
-    height: 90%;
+    height: auto !important;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid gray;
+    margin: 1%;
+    margin-top: 5%;
+    margin-left: -14%;
 
 }
 
-.book-wishlist{
-    border: 2px solid palegreen;
-width: 20%;
-height: 80%;
-display: flex;
-flex-direction: column;
-margin: 1%;
+.sub-my-cart-wishlist {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 }
 
-.book-image-wishlist{
-    border: 2px solid peru;
 
+
+#book-image-cart-wishlist {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.title-wishlist{
-    border: 2px solid purple;
+.title-cart-wishlist {
+
     width: 100%;
     height: 20%;
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
+    margin-left: -55%
+}
+
+#author-cart-wishlist {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-left: -25%
+        /* margin-left: -39%; */
+}
+
+#discount-price-cart-wishlist {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    margin-left: -25%
+}
+
+
+
+
+.main-image-cart-wishlist {
+    width: 100%;
+    height: 50% !important;
+}
+
+#discount-cart-wishlist {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: -5%;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.author-wishlist{
-    border: 2px solid blue;
-
+.price-cart-wishlist {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: -65%;
+    text-decoration: line-through;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2%;
 }
 
-.price-wishlist{
-    border: 2px solid yellowgreen;
 
+.book-image-cart-wishlist img {
+    justify-content: center !important;
+    display: flex;
+    align-items: center !important;
+    margin-left: 20% !important;
 }
 
-.remove-icon-wishlist{
-    border: 2px solid navajowhite;
+.button-cart-wishlist Button {
+    display: flex;
+    flex-direction: row;
+    margin-left: 76%;
+    margin-top: 1%;
+}
 
+
+
+
+
+
+@media screen and (max-width:720px) {
+    .outer-cart {
+        width: 100vw;
+        height: 80vh;
+    }
 }

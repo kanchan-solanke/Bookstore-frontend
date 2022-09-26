@@ -10,8 +10,10 @@ import { getCart, RemoveCart, updateCart } from '../../Services/dataService';
 
 
 function Cart(props) {
+  console.log("props.book", props.datacarts)
 
   const [cartCount, setCartCount] = React.useState([]);
+
   const [bookId, setBookId] = React.useState([])
 
   const [arraycart, setArray] = React.useState([])
@@ -31,38 +33,28 @@ function Cart(props) {
 
   // Remove Cart
 
-  const RemoveCartDetails = () => {
-    RemoveCart()
-      .then((response) => {
-        console.log(response);
-
-        let check = response.data.data.book.map((cart) => {
-          console.log("cart-id", cart.productId)
-          if (cart.productId == props.data._id) {
-            console.log("count", cart.productId)
-            return cart;
-          }
-
-        })
-        console.log("check", check)
-
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+  const RemoveCartDetails = (event) => {
+    RemoveCart(event.target._id)
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   }
 
-
   const getAllCartItems = (data) => {
-    getCart()
-      .then((response) => {
-        console.log(response);
+    getCart().then((response) => {
 
         let check = response.data.data.book.map((cart) => {
-          console.log("cart-id", cart.productId)
-          if (cart.productId == data) {
+
+          console.log("cart-productId", cart.productId,"arraycart-id", arraycart._id)
+// book._id == cart.productId
+           if (data == cart.productId) {
+           
             setCartCount(cart.quantity)
-            setBookId(props.book._id)
+            setBookId(props.book._id)  // How I set book Id here
+            console.log("data", data)
             return data;
           }
           else {
@@ -70,6 +62,7 @@ function Cart(props) {
             return data;
           }
         })
+        console.log("Check", check)
 
       })
       .catch((error) => {
@@ -78,9 +71,9 @@ function Cart(props) {
   }
 
   const subQuantity = (event) => {
-    getAllCartItems(event.target.id)
-    let data = { quantity: props.bookCount - 1 }
-    updateCart(data, event.target.id)
+    getAllCartItems(event.target._id)
+    let data = { quantity: cartCount - 1 }
+    updateCart(data, event.target._id)
       .then((response) => {
         console.log(response)
       })
@@ -90,9 +83,9 @@ function Cart(props) {
   }
 
   const AddQuantity = (event) => {
-    getAllCartItems(event.target.id)
-    let data = { quantity: props.bookCount + 1 }
-    updateCart(data, event.target.id)
+    getAllCartItems(event.target._id)
+    let data = { quantity: cartCount + 1 }
+    updateCart(data, event.target._id)
       .then((response) => {
         console.log(response)
       })
@@ -159,7 +152,7 @@ function Cart(props) {
 
                 {/* Super Child  */}
                 <div className='book-image-cart' id='book-image-cart'>
-                  <img style={{ width: 100, height: 150, margin: 5 }} src="https://public-v2links.adobecc.com/d096df37-ca37-4026-553f-8cfa6bec09ec/component?params=component_id%3A10fa5960-ae05-4a11-9365-133f07ce7183&params=version%3A0&token=1663608440_da39a3ee_6242d7adf3a224bf5b3fc05e2cf7ff50e220a909&api_key=CometServer1"></img>
+                  <img style={{ width: 100, height: 150, margin: 5 }} src="/Images/Image 11.png"></img>
 
                 </div>
                 <div className='main-image-cart'>
@@ -195,15 +188,14 @@ function Cart(props) {
                   <div className='incre-decre-cart'>
                     {/* Super super Child  */}
                     <div id='incre-decre-cart-icon-sub'>
-
                       <RemoveCircleOutlineIcon onClick={subQuantity} />
                     </div>
+
                     <div id='incre-decre-cart-icon-box'>
-                      <div className="quantityBox">{arraycarts.quantity}</div>
-
+                      {arraycarts.quantity}
                     </div>
-                    <div id='incre-decre-cart-icon-add'>
 
+                    <div id='incre-decre-cart-icon-add'>
                       <AddCircleOutlineOutlinedIcon onClick={AddQuantity} />
                     </div>
 
@@ -211,7 +203,8 @@ function Cart(props) {
                     <div id='remove-cart-buuton'>
                       <Button style={{ color: "black" }} onClick={RemoveCartDetails}> Remove </Button>
                     </div>
-                  </div>
+                    </div>
+
                 </div>
 
               </div>

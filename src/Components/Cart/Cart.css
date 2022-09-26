@@ -133,15 +133,16 @@
 #incre-decre-cart-icon-sub {
     margin-left: 2%;
     width: 50%;
+    margin-left: -5%;
+
+
 }
 
 #incre-decre-cart-icon-add {
     width: 50%;
-    margin-left: -20%;
+    margin-left: -15%;
 
 }
-
-.incre-decre-cart-icon-box {}
 
 .incre-decre-cart {
     width: 100%;
@@ -180,23 +181,14 @@
     margin-top: 0.2%;
 }
 
-#incre-decre-cart-icon {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 15%;
-    margin-left: 30%;
-}
-
 #remove-cart-buuton {
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    margin-left: -45%;
-    margin-top: -0.7%;
+    margin-top: -1% !important;
+    margin-left: -35%;
 }
 
 .book-image-cart img {
@@ -211,6 +203,16 @@
     flex-direction: row;
     margin-left: 76%;
     margin-top: 1%;
+}
+
+#incre-decre-cart-icon-box{
+    border: 2px solid gray;
+    width: 15%;
+    margin-left: -15%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #location-symbol {

@@ -3,9 +3,17 @@ import Book from '../BookDashboard/Book'
 import Header from '../Header/Header'
 import { getBook } from '../../Services/dataService'
 import BookDetails from '../BookDetails/BookDetails'
+import Pagination from '@mui/material/Pagination';
+import './Dashboard.css'
+import usePagination from '../Pagination/Pagination'
+
 
 function Dashboard() {
 
+    const [bookArr, setBookArr] = React.useState([])
+    console.log("bookArr", bookArr)
+
+    const [page, setPage] = React.useState(1)
 
     // for getting book 
     const [books, setBooks] = React.useState([])
@@ -20,7 +28,6 @@ function Dashboard() {
     console.log("bookdata", bookdata)
 
 
-    //cart
 
 
     // to send book data to bookdetails
@@ -30,6 +37,16 @@ function Dashboard() {
         setbookdetails(false)
     }
 
+    const getBooks = () => {
+
+        getBook()
+            .then((res) => {
+                setBookArr(res.data.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
 
     console.log("books", books)
 
@@ -44,6 +61,23 @@ function Dashboard() {
             })
     }, [])
 
+    React.useEffect(() => {
+        getBooks()
+    }, [])
+
+    const Per_Page = 8;
+
+    var bookArrLength = bookArr ? bookArr.length : 0
+    const pageCount = Math.ceil(bookArrLength / Per_Page)
+    const paginate = usePagination(bookArr, Per_Page)
+
+    const changePage = (event, page) => {
+        console.log("event", event)
+        setPage(page)
+        paginate.jump(page)
+        paginate.next()
+        paginate.previous()
+    }
 
     return (
 
@@ -72,7 +106,9 @@ function Dashboard() {
 
 
             </div>
-
+            <div className='pagination' id='page'>
+                <Pagination onChange={changePage} page={page} count={pageCount} />
+            </div>
         </div>
 
     )

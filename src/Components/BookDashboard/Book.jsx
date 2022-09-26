@@ -1,6 +1,8 @@
 import React, { useNavigate } from 'react'
 import './Book.css'
 import StarIcon from '@mui/icons-material/Star';
+// import Pagination from '@mui/material/Pagination';
+
 
 function Book(props) {
 
@@ -10,9 +12,9 @@ function Book(props) {
 
     }
     return (
-        
+       
         <div className="quickview_inner-box" onClick={() => listeningToBook(props.book)} >
-
+          
             <div className="quickview_section1" >
 
                 <img src="/Images/Image 11.png" alt='image'></img>
@@ -55,6 +57,9 @@ function Book(props) {
             </div>
 
         </div>
+
+
+
     )
 
 }

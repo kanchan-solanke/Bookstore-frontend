@@ -4,6 +4,10 @@
     box-sizing: border-box;
     margin: 0px;
 }
+
+.mycart-book{
+    margin-left: -5%;
+}
 .quickview_inner-box {
     display: inline-flex;
     flex-direction: column;

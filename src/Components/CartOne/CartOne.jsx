@@ -2,6 +2,7 @@ import { Button } from '@mui/material'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCart } from '../../Services/dataService'
+import Book from '../BookDashboard/Book'
 import Cart from '../Cart/Cart'
 import Customer from '../CustomerDetails/Customer'
 import Header from '../Header/Header'
@@ -54,7 +55,7 @@ function CartOne(props) {
             <div className='cartone-all'>
 
                 <div>
-                    <Cart toggleBool={toggleBool} />
+              <Cart datacart={<Book/>} toggleBool={toggleBool} />
                 </div>
             
                 {

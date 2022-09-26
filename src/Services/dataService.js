@@ -43,7 +43,7 @@ export const addCustomer = (obj) =>{
 }
 
 export const RemoveCart = (id) =>{
-    let response = axios.put(`http://localhost:5000/api/v1/carts/${id}`, null, headersConfig)
+    let response = axios.put(`http://localhost:5000/api/v1/carts/${id}/remove`,null, headersConfig)
     return response
 }
 
